@@ -51,15 +51,9 @@ set_target_properties(avfilter
                       PROPERTIES IMPORTED_LOCATION
                       ${JNI_LIBS_DIR}/${ANDROID_ABI}/libavfilter.so )
 
-add_library(avdevice
-            SHARED
-            IMPORTED )
-set_target_properties(avdevice
-                      PROPERTIES IMPORTED_LOCATION
-                      ${JNI_LIBS_DIR}/${ANDROID_ABI}/libavdevice.so )
 
 include_directories(${JNI_LIBS_DIR}/includes)
 
 target_link_libraries(native-lib
-                      avutil swresample swscale avcodec avformat avfilter avdevice
+                      avutil swresample swscale avcodec avformat avfilter
                       ${log-lib} ${android-lib} )

@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 setInfoText(FFUtils.avFormatInfo());
                 break;
             case R.id.button_play:
-                String videoPath = Environment.getExternalStorageDirectory() + "/Movies/PERU.MP4";
+                String videoPath = "udp://239.1.1.156:50000";// Environment.getExternalStorageDirectory() + "/Movies/PERU.MP4";
                 mVideoView.playVideo(videoPath);
                 break;
         }
