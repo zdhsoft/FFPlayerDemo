@@ -170,7 +170,7 @@ function build_android {
     --enable-decoder=vp8_mediacodec \
     --enable-decoder=vp9_mediacodec \
     --cross-prefix="${NDK_HOME}/toolchains/arm-linux-androideabi-4.9/prebuilt/${NDK_HOST_PLATFORM}/bin/arm-linux-androideabi-" \
-    --sysroot="${NDK_HOME}/platforms/android-19/arch-arm/" \
+    --sysroot="${NDK_HOME}/platforms/android-21/arch-arm/" \
     --extra-cflags="-march=armv7-a -mfloat-abi=softfp -mfpu=neon -fPIC -DANDROID " \
     --extra-ldexeflags=-pie \
     ${COMMON_OPTIONS}
@@ -216,7 +216,7 @@ function build_android {
     --arch=x86 \
     --cpu=i686 \
     --cross-prefix="${NDK_HOME}/toolchains/x86-4.9/prebuilt/${NDK_HOST_PLATFORM}/bin/i686-linux-android-" \
-    --sysroot="${NDK_HOME}/platforms/android-19/arch-x86/" \
+    --sysroot="${NDK_HOME}/platforms/android-21/arch-x86/" \
     --extra-ldexeflags=-pie \
     ${COMMON_OPTIONS} 
     make clean
